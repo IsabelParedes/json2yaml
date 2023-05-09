@@ -85,7 +85,7 @@
     if (str.match(/^[\w]+$/)) {
       return str;
     } else {
-      return '"'+escape(str).replace(/%u/g,'\\u').replace(/%U/g,'\\U').replace(/%/g,'\\x')+'"';
+      return '"'+encodeURI(str).replace(/%u/g,'\\u').replace(/%U/g,'\\U').replace(/%/g,'\\x')+'"';
     }
   }
 
